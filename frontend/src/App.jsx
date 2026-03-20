@@ -6,8 +6,8 @@ import {
 import './App.css'
 
 // ── Config ─────────────────────────────────────────────────────────────────
-// Set VITE_API_URL in Vercel's dashboard → Settings → Environment Variables
-const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
+// Set your Render backend URL in frontend/.env  →  VITE_API_URL=https://...
+const API_URL = import.meta.env.VITE_API_URL
 
 const CLASS_LABELS = ['Class 0', 'Class 1', 'Class 2']
 const CLASS_COLORS = ['#6366f1', '#8b5cf6', '#a78bfa']

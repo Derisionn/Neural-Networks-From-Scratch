@@ -16,6 +16,7 @@ Run with:
 import numpy as np
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, field_validator
 from typing import List
 
@@ -101,6 +102,16 @@ app = FastAPI(
     ),
     version="1.0.0",
     lifespan=lifespan,
+)
+
+# ---------------------------------------------------------------------------
+# CORS — allow all origins so the Vercel frontend can reach this API
+# ---------------------------------------------------------------------------
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],       # tighten to your Vercel URL in production
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
