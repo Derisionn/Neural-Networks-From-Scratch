@@ -193,10 +193,3 @@ The `render.yaml` at the root enables one-click backend deployment — push to G
 
 ---
 
-## 📄 License
-
-MIT — free to use, fork, and learn from.
-
----
-
-<p align="center">Built to understand ML from first principles — not just to use it.</p>
